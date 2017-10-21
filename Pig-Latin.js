@@ -3,7 +3,6 @@ function translatePigLatin(str) {
     var str1stChar = str.substr(0, 1);
     var str1st3Chars = str.substr(0, 3);
     var str1st2Chars = str.substr(0, 2);
-    var strSplit;
     var vowels = ['a', 'e', 'i', 'o', 'u'];
     var twoCharConsonantClusters = ['bl', 'br', 'sc', 'sk', 'cl', 'cr', 'dr', 'sm', 'fl', 'fr', 'sn', 'gl', 'gr', 'sp', 'pl', 'pr', 'sl', 'tr', 'th'];
     var threeCharConsonantClusters = ['scr', 'spl', 'spr', 'str', 'sch', 'scr', 'sph'];
