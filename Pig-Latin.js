@@ -13,21 +13,15 @@ function translatePigLatin(str) {
         return str;
         // Check str first 3 characters for a 3 char consonant cluster and handle
     } else if (threeCharConsonantClusters.indexOf(str1st3Chars) !== -1) {
-        strSplit = str.split(str1st3Chars, 1);
-        strSplit.push(str1st3Chars + "ay");
-        str = strSplit.join('');
+        str = str.substr(3) + str1st3Chars + "ay";
         return str;
         // Check str first 2 characters for a 2 char consonant cluster and handle
     } else if (twoCharConsonantClusters.indexOf(str1st2Chars) !== -1) {
-        strSplit = str.split(str1st2Chars, 1);
-        strSplit.push(str1st2Chars + "ay");
-        str = strSplit.join('');
+        str = str.substr(2) + str1st2Chars + "ay";
         return str;
         // Handle single consonant
     } else {
-        strSplit = str.split(str1stChar, 1);
-        strSplit.push(str1stChar + "ay");
-        str = strSplit.join('');
+        str = str.substr(1) + str1stChar + "ay";
         return str;
     }
 }
@@ -36,3 +30,4 @@ translatePigLatin("algorithm"); // returns "algorithmway"
 translatePigLatin("consonant"); // returns "onsonantcay"
 translatePigLatin("glove"); // returns "oveglay"
 translatePigLatin("string"); // returns "ingstray"
+translatePigLatin("paragraph"); // returns "aragraphpay"
